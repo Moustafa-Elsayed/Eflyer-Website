@@ -13,7 +13,6 @@ import {
   Collapse,
   List,
 } from "@mui/material";
-import LoginIcon from "@mui/icons-material/Login";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import StarBorder from "@mui/icons-material/StarBorder";
@@ -24,7 +23,6 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
-import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./header.scss";
 import Textswiper from "./Textswiper";
@@ -139,7 +137,7 @@ const Header = () => {
                 setClose("temporary");
                 setOpen("block");
               }}
-              sx={{ display: { xs: "block", md: "none" }, color: "#ff7662" }}
+              sx={{ display: { xs: "block", md: "none" }, color: "#343a40" }}
             />
           </Toolbar>
         </AppBar>
@@ -155,6 +153,7 @@ const Header = () => {
           setOpen("none");
         }}
         sx={{
+          
           position: "relative",
           width: 250,
           flexShrink: 0,
@@ -175,7 +174,7 @@ const Header = () => {
           sx={{
             position: "absolute",
             right: 13,
-            color: "#ff7662",
+            color: "#343a40",
             top: 13,
             zIndex: "555",
             cursor: "pointer",
@@ -217,7 +216,7 @@ const Header = () => {
             >
               <ListItemButton sx={{ pl: 4 }}>
                 <ListItemIcon>
-                  <StarBorder sx={{ color: "red" }} />
+                  <StarBorder sx={{ color: "#343a40" }} />
                 </ListItemIcon>
                 <ListItemText
                   primary="Main Home"
