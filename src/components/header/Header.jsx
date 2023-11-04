@@ -58,34 +58,35 @@ const Header = () => {
                   onClick={() => {
                     navigate("/");
                   }}
-                  sx={{}}
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "transparent",
+                    },
+                  }}
                 >
                   <ListItemText
                     primary="Home"
                     sx={{
-                      color: "black",
+                      color: "#343a40",
                       marginRight: "30px",
                       marginLeft: "30px",
                       textAlign: "center",
                       "&:hover": {
-                        color: "red",
+                        color: "#f26522",
                         backgroundColor: "transparent",
                       },
 
                       borderBottom:
-                        location.pathname === "/" ? "1px solid red" : null,
+                        location.pathname === "/" ? "1px solid #f26522" : null,
                     }}
                   />
                 </ListItemButton>
 
                 <ListItemButton
                   sx={{
-                    "&:hover": { color: "red", backgroundColor: "transparent" },
-
-                    borderBottom:
-                      location.pathname === "/contact"
-                        ? "1px solid #03a4ed"
-                        : null,
+                    "&:hover": {
+                      backgroundColor: "transparent",
+                    },
                   }}
                   onClick={() => {
                     navigate("contact");
@@ -94,24 +95,32 @@ const Header = () => {
                   <ListItemText
                     primary="Product"
                     sx={{
-                      color: "black",
+                      color: "#343a40",
                       marginRight: "30px",
                       marginLeft: "30px",
+                      textAlign: "center",
+                      "&:hover": {
+                        color: "#f26522",
+                        backgroundColor: "transparent",
+                      },
+
+                      borderBottom:
+                        location.pathname === "/shfdj"
+                          ? "1px solid #f26522"
+                          : null,
                     }}
                   />
                 </ListItemButton>
 
                 <Button
-                  whileHover={{
-                    scale: 1.1,
-                    transition: { duration: 0.3 },
-                  }}
-                  whileTap={{ scale: 0.9 }}
                   sx={{
                     backgroundColor: "transparent",
-                    color: "black",
+                    color: "#343a40",
                     marginLeft: "10px",
-                    "&:hover": { color: "#03a4ed" },
+                    "&:hover": {
+                      color: "#f26522",
+                      backgroundColor: "transparent",
+                    },
                   }}
                   onClick={() => {
                     navigate("/message");
