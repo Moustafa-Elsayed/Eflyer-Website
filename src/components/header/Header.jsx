@@ -25,7 +25,7 @@ import { useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
-
+import "./header.scss"
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -40,15 +40,13 @@ const Header = () => {
       <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Typography
+          variant="p"
             className="logo"
-            initial={{ y: -250 }}
-            animate={{ y: -3 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 50 }}
             onClick={() => {
               navigate("/");
             }}
           >
-            <img src=".\images\logo.png" alt="" />
+            Eflyer
           </Typography>
 
           <Box sx={{ display: { xs: "none", md: "block" } }}>
@@ -122,7 +120,6 @@ const Header = () => {
               </ListItemButton>
 
               <Button
-                
                 whileHover={{
                   scale: 1.1,
                   transition: { duration: 0.3 },
