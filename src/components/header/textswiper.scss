@@ -1,20 +1,22 @@
 .swiper {
-  height: 300px;
   background-color: transparent;
-  max-width: 50%;
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 50%;
   transform: translate(-50%, -50%);
+}
+.swiper .slide-content {
+  text-align: center;
+  align-items: center;
 }
 .swiper .slide-content p {
   color: white;
-  font-size: 20px;
+  font-size: 50px;
 }
 .swiper .slide-content h2 {
   color: white;
-  font-size: 20px;
-
+  font-size: 50px;
+  font-style: bold;
 }
 .swiper-slide {
   text-align: center;
@@ -30,4 +32,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-pagination-bullet {
+  background-color: #ff5722; /* Change to your desired color */
 }

@@ -17,6 +17,7 @@ const Textswiper = () => {
         delay: 2500,
         disableOnInteraction: false,
       }}
+      pagination={{ el: ".swiper-pagination", clickable: true }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
     >
@@ -25,7 +26,7 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="text" color="primary">
+          <Button variant="contained" color="primary">
             BUY NOW
           </Button>
         </div>
@@ -34,7 +35,7 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="text" color="primary">
+          <Button variant="contained" color="primary">
             BUY NOW
           </Button>
         </div>
@@ -43,7 +44,7 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="text" color="primary">
+          <Button variant="contained" color="primary">
             BUY NOW
           </Button>
         </div>

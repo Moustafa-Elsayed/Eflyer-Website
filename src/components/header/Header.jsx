@@ -134,6 +134,7 @@ const Header = () => {
             />
           </Toolbar>
         </AppBar>
+        <div class="overlay"></div>
         <Textswiper />
       </div>
 
