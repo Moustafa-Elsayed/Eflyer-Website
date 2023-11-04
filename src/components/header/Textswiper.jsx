@@ -10,21 +10,19 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const Textswiper = () => {
   return (
     <Swiper
-    loop
+      loop
       spaceBetween={30}
       centeredSlides={true}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
-      pagination={{
-        clickable: true,
-      }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
     >
-      <div className="slide-pot">  <SwiperSlide>
-        <div>
+      <div className="slide-pot"></div>
+      <SwiperSlide>
+        <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
           <Button variant="text" color="primary">
@@ -33,7 +31,7 @@ const Textswiper = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div>
+        <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
           <Button variant="text" color="primary">
@@ -42,15 +40,14 @@ const Textswiper = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div>
+        <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
           <Button variant="text" color="primary">
             BUY NOW
           </Button>
         </div>
-      </SwiperSlide></div>
-    
+      </SwiperSlide>
     </Swiper>
   );
 };
