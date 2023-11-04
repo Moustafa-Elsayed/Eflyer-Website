@@ -68,6 +68,7 @@ const Header = () => {
                     primary="Home"
                     sx={{
                       color: "#343a40",
+                      fontSize: "22px",
                       marginRight: "30px",
                       marginLeft: "30px",
                       textAlign: "center",
@@ -142,7 +143,7 @@ const Header = () => {
             />
           </Toolbar>
         </AppBar>
-        <div class="overlay"></div>
+        <div className="overlay"></div>
         <Textswiper />
       </div>
 
@@ -237,25 +238,6 @@ const Header = () => {
               mb: 1,
               "&:hover": { backgroundColor: "#ff7662" },
               backgroundColor:
-                location.pathname === "/about" ? " #03a4ed" : null,
-            }}
-            onClick={() => {
-              setClose("permanent");
-              setOpen("none");
-              navigate("/about");
-            }}
-          >
-            <ListItemIcon>
-              <DashboardCustomizeIcon sx={{ color: "blue" }} />
-            </ListItemIcon>
-            <ListItemText primary="About" />
-          </ListItemButton>
-          <ListItemButton
-            sx={{
-              textAlign: "center",
-              mb: 1,
-              "&:hover": { backgroundColor: "#ff7662" },
-              backgroundColor:
                 location.pathname === "/contact" ? " #03a4ed" : null,
             }}
             onClick={() => {
@@ -267,26 +249,26 @@ const Header = () => {
             <ListItemIcon>
               <PermContactCalendarIcon sx={{ color: "blue" }} />
             </ListItemIcon>
-            <ListItemText primary="Contact" />
+            <ListItemText primary="Product" />
           </ListItemButton>
 
           <Button
             sx={{
-              textAlign: "center",
-              mb: 1,
-              "&:hover": { backgroundColor: "#1976d2" },
+              backgroundColor: "transparent",
+              color: "#343a40",
+              marginLeft: "10px",
+              "&:hover": {
+                color: "#f26522",
+                backgroundColor: "transparent",
+              },
             }}
-            fullWidth
-            startIcon={<LoginIcon />}
-            variant="outlined"
-            color="inherit"
             onClick={() => {
-              setClose("permanent");
-              setOpen("none");
               navigate("/message");
             }}
+            disableElevation
+            startIcon={<ShoppingCartIcon sx={{}} />}
           >
-            Message Us Now
+            Cart
           </Button>
         </Box>
       </Drawer>

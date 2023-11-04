@@ -23,6 +23,7 @@ const Textswiper = () => {
       pagination={{ el: ".swiper-pagination", clickable: true }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
+      className="swiper"
     >
       <div className="slide-pot"></div>
       <SwiperSlide>
