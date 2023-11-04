@@ -27,6 +27,7 @@ import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./header.scss";
+import Textswiper from "./Textswiper";
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -133,6 +134,7 @@ const Header = () => {
             />
           </Toolbar>
         </AppBar>
+        <Textswiper />
       </div>
 
       {/* start Drawer */}

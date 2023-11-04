@@ -1,0 +1,29 @@
+.swiper {
+  max-width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-color: transparent;
+}
+.swiper .slide-pot {
+  max-width: 50%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
