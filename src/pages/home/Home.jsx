@@ -1,9 +1,10 @@
 import React from "react";
+import Textswiper from "../../components/header/Textswiper";
 
 const Home = () => {
   return (
     <div>
-      <h1>home page </h1>
+      <Textswiper />
     </div>
   );
 };

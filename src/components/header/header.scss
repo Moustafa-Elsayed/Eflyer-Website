@@ -1,4 +1,12 @@
-.logo{
-  font-size: 35px ;
-  color: black;
+.appbar {
+  background-image: url(../../../public/images/banner-bg.png);
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .logo {
+    font-size: 35px;
+    color: black;
+  }
 }

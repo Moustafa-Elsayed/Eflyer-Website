@@ -25,7 +25,8 @@ import { useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
-import "./header.scss"
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import "./header.scss";
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,119 +38,103 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography
-          variant="p"
-            className="logo"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            Eflyer
-          </Typography>
+      <div className="appbar">
+        <AppBar position="relative" sx={{ backgroundColor: "transparent" }} >
+          <Toolbar sx={{ justifyContent: "space-between" }} >
+            <Typography
+              variant="p"
+              className="logo"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              Eflyer
+            </Typography>
 
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <Box sx={{ display: "flex", marginRight: "60px" }}>
-              <ListItemButton
-                onClick={() => {
-                  navigate("/");
-                }}
-                sx={{
-                  "&:hover": { color: "red", backgroundColor: "transparent" },
-
-                  borderBottom:
-                    location.pathname === "/" ? "1px solid #03a4ed" : null,
-                }}
-              >
-                <ListItemText
-                  primary="Home"
-                  sx={{
-                    color: "black",
-                    marginRight: "30px",
-                    marginLeft: "30px",
-                    textAlign: "center",
-                    "&:hover": {
-                      color: "red",
-                    },
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
+              <Box sx={{ display: "flex", marginRight: "60px" }}>
+                <ListItemButton
+                  onClick={() => {
+                    navigate("/");
                   }}
-                />
-              </ListItemButton>
-
-              <ListItemButton
-                sx={{
-                  "&:hover": { color: "red", backgroundColor: "transparent" },
-
-                  borderBottom:
-                    location.pathname === "/about" ? "1px solid #03a4ed" : null,
-                }}
-                onClick={() => {
-                  navigate("about");
-                }}
-              >
-                <ListItemText
-                  primary="About"
                   sx={{
-                    color: "black",
-                    marginRight: "30px",
-                    marginLeft: "30px",
-                  }}
-                />
-              </ListItemButton>
-              <ListItemButton
-                sx={{
-                  "&:hover": { color: "red", backgroundColor: "transparent" },
+                    "&:hover": { color: "red", backgroundColor: "transparent" },
 
-                  borderBottom:
-                    location.pathname === "/contact"
-                      ? "1px solid #03a4ed"
-                      : null,
-                }}
-                onClick={() => {
-                  navigate("contact");
-                }}
-              >
-                <ListItemText
-                  primary="Contact"
+                    borderBottom:
+                      location.pathname === "/" ? "1px solid #03a4ed" : null,
+                  }}
+                >
+                  <ListItemText
+                    primary="Home"
+                    sx={{
+                      color: "black",
+                      marginRight: "30px",
+                      marginLeft: "30px",
+                      textAlign: "center",
+                      "&:hover": {
+                        color: "red",
+                      },
+                    }}
+                  />
+                </ListItemButton>
+
+                <ListItemButton
                   sx={{
-                    color: "black",
-                    marginRight: "30px",
-                    marginLeft: "30px",
-                  }}
-                />
-              </ListItemButton>
+                    "&:hover": { color: "red", backgroundColor: "transparent" },
 
-              <Button
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.3 },
-                }}
-                whileTap={{ scale: 0.9 }}
-                sx={{
-                  backgroundColor: "#ff8465",
-                  color: "black",
-                  marginLeft: "10px",
-                  "&:hover": { backgroundColor: "#03a4ed" },
-                }}
-                onClick={() => {
-                  navigate("/message");
-                }}
-                disableElevation
-              >
-                Message Us Now
-              </Button>
+                    borderBottom:
+                      location.pathname === "/contact"
+                        ? "1px solid #03a4ed"
+                        : null,
+                  }}
+                  onClick={() => {
+                    navigate("contact");
+                  }}
+                >
+                  <ListItemText
+                    primary="Product"
+                    sx={{
+                      color: "black",
+                      marginRight: "30px",
+                      marginLeft: "30px",
+                    }}
+                  />
+                </ListItemButton>
+
+                <Button
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.3 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  sx={{
+                    backgroundColor: "transparent",
+                    color: "black",
+                    marginLeft: "10px",
+                    "&:hover": { color: "#03a4ed" },
+                  }}
+                  onClick={() => {
+                    navigate("/message");
+                  }}
+                  disableElevation
+                  startIcon={<ShoppingCartIcon />}
+                >
+                  Cart
+                </Button>
+              </Box>
             </Box>
-          </Box>
 
-          <MenuIcon
-            onClick={() => {
-              setClose("temporary");
-              setOpen("block");
-            }}
-            sx={{ display: { xs: "block", md: "none" }, color: "#ff7662" }}
-          />
-        </Toolbar>
-      </AppBar>
+            <MenuIcon
+              onClick={() => {
+                setClose("temporary");
+                setOpen("block");
+              }}
+              sx={{ display: { xs: "block", md: "none" }, color: "#ff7662" }}
+            />
+          </Toolbar>
+        </AppBar>
+      </div>
+
       {/* start Drawer */}
       <Drawer
         open={true}
