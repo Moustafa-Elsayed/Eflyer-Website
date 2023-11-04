@@ -40,8 +40,8 @@ const Header = () => {
   return (
     <>
       <div className="appbar">
-        <AppBar position="relative" sx={{ backgroundColor: "transparent" }} >
-          <Toolbar sx={{ justifyContent: "space-between" }} >
+        <AppBar position="relative" sx={{ backgroundColor: "transparent" }}>
+          <Toolbar sx={{ justifyContent: "space-between" }}>
             <Typography
               variant="p"
               className="logo"
@@ -58,12 +58,7 @@ const Header = () => {
                   onClick={() => {
                     navigate("/");
                   }}
-                  sx={{
-                    "&:hover": { color: "red", backgroundColor: "transparent" },
-
-                    borderBottom:
-                      location.pathname === "/" ? "1px solid #03a4ed" : null,
-                  }}
+                  sx={{}}
                 >
                   <ListItemText
                     primary="Home"
@@ -74,7 +69,11 @@ const Header = () => {
                       textAlign: "center",
                       "&:hover": {
                         color: "red",
+                        backgroundColor: "transparent",
                       },
+
+                      borderBottom:
+                        location.pathname === "/" ? "1px solid red" : null,
                     }}
                   />
                 </ListItemButton>

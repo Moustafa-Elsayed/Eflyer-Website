@@ -5,7 +5,10 @@ import Button from "@mui/material/Button";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import SwiperCore from "swiper";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+// import "swiper/swiper.scss";
+SwiperCore.use([Pagination]);
 
 const Textswiper = () => {
   return (
@@ -26,7 +29,7 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" className="textslider-btn">
             BUY NOW
           </Button>
         </div>
@@ -35,7 +38,7 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" className="textslider-btn">
             BUY NOW
           </Button>
         </div>
@@ -44,7 +47,7 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" className="textslider-btn">
             BUY NOW
           </Button>
         </div>
