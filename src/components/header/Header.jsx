@@ -24,7 +24,7 @@ import { useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import "./header.scss";
+import "./header.css";
 import Textswiper from "./Textswiper";
 const Header = () => {
   const navigate = useNavigate();
@@ -153,7 +153,6 @@ const Header = () => {
           setOpen("none");
         }}
         sx={{
-          
           position: "relative",
           width: 250,
           flexShrink: 0,

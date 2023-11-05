@@ -39,22 +39,3 @@
   height: 100%;
   object-fit: cover;
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: red; /* Change the color to your desired color */
-}
-.swiper-pagination-bullet {
-  background-color: red; /* Change the color to your desired color */
-  width: 10px; /* Adjust the width as needed */
-  height: 10px; /* Adjust the height as needed */
-  margin: 0 5px; /* Adjust the margin as needed */
-  border-radius: 50%; /* Makes the bullets circular */
-}
-.swiper .slide-content .textslider-btn {
-  background-color: #343a40;
-  padding: 10px 30px;
-}
-.swiper .slide-content .textslider-btn:hover {
-  background-color: #f26522;
-}
