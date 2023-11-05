@@ -12,6 +12,7 @@ import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { deleteFromCart } from "../../redux/cartSlice";
 
 const Cart = () => {
   const product = useSelector((state) => state.product);
@@ -46,11 +47,19 @@ const Cart = () => {
                   {product.id}
                 </TableCell>
                 <TableCell align="left">{product.title}</TableCell>
-                <TableCell align="left"><img width="30px" src={product.image}  alt=""/></TableCell>
+                <TableCell align="left">
+                  <img width="30px" src={product.image} alt="" />
+                </TableCell>
                 <TableCell align="left">{product.price}</TableCell>
 
                 <TableCell align="left">
-                  <Button variant="text" color="primary">
+                  <Button
+                    variant="text"
+                    color="primary"
+                    onClick={() => {
+                      dispatch(deleteFromCart(product));
+                    }}
+                  >
                     <DeleteForeverIcon />
                   </Button>
                 </TableCell>

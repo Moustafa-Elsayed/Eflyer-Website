@@ -4,10 +4,10 @@ export const cartSlice = createSlice({
   initialState: [],
   reducers: {
     addToCart: (state, action) => {
-      state.push(action.payload)
+      state.push(action.payload);
     },
     deleteFromCart: (state, action) => {
-      
+      return state.filter((product) => product.id !== action.payload.id);
     },
     clear: (state, action) => {},
   },
