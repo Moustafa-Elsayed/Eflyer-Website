@@ -18,37 +18,57 @@ const ProductList = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <Grid container spacing={0}>
-      <Grid item>
+    <>
+      <Typography
+        variant="body1"
+        color="initial"
+        sx={{
+          fontWeight:"800",
+          fontSize: "35px",
+          color: "#343a40",
+          textAlign: "center",
+          paddingBottom: "30px",
+          paddingTop: "30px",
+        }}
+      >
+        Man & Woman Fashion
+      </Typography>
+      <Grid container spacing={2}>
         {product.map((product) => (
-          <Card sx={{ maxWidth: 345 }} key={product.id}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={product.image}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {product.category}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {product.title}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary" onClick={()=>{
-                dispatch(addToCart(product))
-              }}>
-                BUY NOW
-              </Button>
-            </CardActions>
-          </Card>
+          <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={product.image}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {product.category}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {product.title}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => {
+                    dispatch(addToCart(product));
+                  }}
+                >
+                  BUY NOW
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
         ))}
       </Grid>
-    </Grid>
+    </>
   );
 };
 
