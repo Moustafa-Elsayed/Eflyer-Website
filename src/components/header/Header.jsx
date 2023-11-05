@@ -127,7 +127,7 @@ const Header = () => {
                   disableElevation
                   startIcon={<ShoppingCartIcon />}
                 >
-                  Cart
+                  Cart-2
                 </Button>
               </Box>
             </Box>

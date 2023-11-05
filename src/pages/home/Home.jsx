@@ -1,9 +1,12 @@
 import React from "react";
+import ProductList from "../product/ProductList";
+import Container from "@mui/material/Container";
 
 const Home = () => {
   return (
-    <div>
-    </div>
+    <Container maxWidth="lg">
+      <ProductList />
+    </Container>
   );
 };
 

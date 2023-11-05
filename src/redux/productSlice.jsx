@@ -1,30 +1,37 @@
-import { createSlice } from "@reduxjs/toolkit";
+/* eslint-disable no-empty-pattern */
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
-  value: 0,
+  value: [],
 };
+
+export const fetchProduct = createAsyncThunk(
+  "productSlice/fetchProduct",
+  async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/products");
+      // Assuming the API responds with JSON data
+      return response.data;
+    } catch (error) {
+      // Handle any errors here
+      throw error;
+    }
+  }
+);
 
 export const productSlice = createSlice({
   name: "product",
   initialState,
-  reducers: {
-    increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchProduct.fulfilled, (state, action) => {
+      return action.payload;
+    });
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = productSlice.actions;
+export const {} = productSlice.actions;
 
 export default productSlice.reducer;
