@@ -24,6 +24,8 @@ import { useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
 import "./header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -119,6 +121,8 @@ const Header = () => {
                   />
                 </ListItemButton>
 
+              
+
                 <Button
                   sx={{
                     backgroundColor: "transparent",
@@ -134,9 +138,12 @@ const Header = () => {
                     
                   }}
                   disableElevation
-                  startIcon={<ShoppingCartIcon />}
+                  startIcon={  <Badge color="primary" badgeContent={cart.length} 
+                  showZero>
+                    <ShoppingCartIcon />
+                  </Badge>}
                 >
-                  Cart-{cart.length}
+                  
                 </Button>
               </Box>
             </Box>
@@ -151,7 +158,6 @@ const Header = () => {
           </Toolbar>
         </AppBar>
         <div className="overlay"></div>
-        
       </div>
 
       {/* start Drawer */}

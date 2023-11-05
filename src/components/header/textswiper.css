@@ -6,12 +6,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.jks {
-  position: relative;
-}
+
 .swiper .slide-content {
   text-align: center;
   align-items: center;
+padding-top: 90px;
   z-index: 1;
 }
 .swiper .slide-content p {

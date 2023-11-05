@@ -25,7 +25,7 @@ const Cart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <Container maxWidth="lg" sx={{marginTop:"100px"}}>
+    <Container maxWidth="lg" sx={{marginTop:"150px"}}>
       <TableContainer component={Paper} >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
