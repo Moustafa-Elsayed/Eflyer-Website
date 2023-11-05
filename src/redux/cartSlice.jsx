@@ -6,7 +6,9 @@ export const cartSlice = createSlice({
     addToCart: (state, action) => {
       state.push(action.payload)
     },
-    deleteFromCart: (state, action) => {},
+    deleteFromCart: (state, action) => {
+      
+    },
     clear: (state, action) => {},
   },
 });

@@ -23,7 +23,7 @@ const ProductList = () => {
         variant="body1"
         color="initial"
         sx={{
-          fontWeight:"800",
+          fontWeight: "800",
           fontSize: "35px",
           color: "#343a40",
           textAlign: "center",
