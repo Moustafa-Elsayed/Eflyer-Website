@@ -1,12 +1,13 @@
 .swiper {
-  background-color: transparent;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-left: 50px;
-  margin-right: 50px;
-  z-index: 1;
+  background-image: url(../../../public/images/banner-bg.png);
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jks {
+  position: relative;
 }
 .swiper .slide-content {
   text-align: center;

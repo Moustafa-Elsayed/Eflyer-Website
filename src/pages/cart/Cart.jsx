@@ -25,8 +25,8 @@ const Cart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <Container maxWidth="lg">
-      <TableContainer component={Paper}>
+    <Container maxWidth="lg" sx={{marginTop:"100px"}}>
+      <TableContainer component={Paper} >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -60,7 +60,7 @@ const Cart = () => {
                       dispatch(deleteFromCart(product));
                     }}
                   >
-                    <DeleteForeverIcon />
+                    <DeleteForeverIcon sx={{color:"red"}}/>
                   </Button>
                 </TableCell>
               </TableRow>

@@ -1,12 +1,16 @@
 import React from "react";
 import ProductList from "../product/ProductList";
 import Container from "@mui/material/Container";
+import Textswiper from "../../components/header/Textswiper";
 
 const Home = () => {
   return (
-    <Container maxWidth="lg">
-      <ProductList />
-    </Container>
+    <>
+      <Textswiper />
+      <Container maxWidth="lg">
+        <ProductList />
+      </Container>
+    </>
   );
 };
 

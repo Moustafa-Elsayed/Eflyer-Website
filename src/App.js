@@ -15,7 +15,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="cart" element={<Cart />} />
         <Route path="*" element={<Notfound />} />
       </Route>
     )

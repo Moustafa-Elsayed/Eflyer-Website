@@ -25,7 +25,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./header.css";
-import Textswiper from "./Textswiper";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../../redux/productSlice";
@@ -152,7 +151,7 @@ const Header = () => {
           </Toolbar>
         </AppBar>
         <div className="overlay"></div>
-        <Textswiper />
+        
       </div>
 
       {/* start Drawer */}
