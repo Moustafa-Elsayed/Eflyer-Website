@@ -26,7 +26,16 @@ import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./header.css";
 import Textswiper from "./Textswiper";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchProduct } from "../../redux/productSlice";
 const Header = () => {
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchProduct());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const navigate = useNavigate();
   const location = useLocation();
   const [open, setOpen] = useState("none");
@@ -38,7 +47,7 @@ const Header = () => {
   return (
     <>
       <div className="appbar">
-        <AppBar position="relative" sx={{ backgroundColor: "transparent" }}>
+        <AppBar position="fixed" sx={{ backgroundColor: "transparent" }}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Typography
               variant="p"
@@ -122,12 +131,13 @@ const Header = () => {
                     },
                   }}
                   onClick={() => {
-                    navigate("/message");
+                    navigate("/cart");
+                    
                   }}
                   disableElevation
                   startIcon={<ShoppingCartIcon />}
                 >
-                  Cart-2
+                  Cart-{cart.length}
                 </Button>
               </Box>
             </Box>

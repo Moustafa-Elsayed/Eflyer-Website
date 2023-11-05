@@ -7,6 +7,7 @@ import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../../redux/productSlice";
+import { addToCart } from "../../redux/cartSlice";
 
 const ProductList = () => {
   const product = useSelector((state) => state.product);
@@ -19,56 +20,33 @@ const ProductList = () => {
   return (
     <Grid container spacing={0}>
       <Grid item>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-          </CardActions>
-        </Card>
-      </Grid>
-      <Grid item>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-          </CardActions>
-        </Card>
+        {product.map((product) => (
+          <Card sx={{ maxWidth: 345 }} key={product.id}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={product.image}
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {product.category}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {product.title}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary" onClick={()=>{
+                dispatch(addToCart(product))
+              }}>
+                BUY NOW
+              </Button>
+            </CardActions>
+          </Card>
+        ))}
       </Grid>
     </Grid>
   );
