@@ -26,6 +26,7 @@ const Textswiper = () => {
       className="swiper"
     >
       <div className="slide-pot"></div>
+
       <SwiperSlide>
         <div className="slide-content">
           <h2>GET START</h2>

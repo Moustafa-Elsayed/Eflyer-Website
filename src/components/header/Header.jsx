@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <>
       <div className="appbar">
-        <AppBar position="fixed" sx={{ backgroundColor: "gray" }}>
+        <AppBar position="fixed" sx={{ backgroundColor: "transparent" }}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Typography
               variant="p"

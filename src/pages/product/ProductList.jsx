@@ -32,7 +32,7 @@ const ProductList = () => {
       >
         Man & Woman Fashion
       </Typography>
-      <Grid container spacing={5}>
+      <Grid container spacing={7}>
         {product.map((product) => (
           <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
             <Card
@@ -49,7 +49,7 @@ const ProductList = () => {
                 gutterBottom
                 variant="h5"
                 component="div"
-                sx={{ paddingTop: "10px" }}
+                sx={{ paddingTop: "10px", color: "#343a40", fontWeight: "600" }}
               >
                 {product.category}
               </Typography>
