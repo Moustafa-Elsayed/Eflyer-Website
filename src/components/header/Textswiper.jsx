@@ -30,7 +30,20 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="contained" className="textslider-btn">
+          <Button
+            variant="contained"
+            className="textslider-btn"
+            sx={{
+              backgroundColor: "#343a40",
+              color: "white",
+              marginTop: "20px",
+              marginLeft: "10px",
+              "&:hover": {
+                color: "white",
+                backgroundColor: "#f26522",
+              },
+            }}
+          >
             BUY NOW
           </Button>
         </div>
@@ -39,7 +52,20 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="contained" className="textslider-btn">
+          <Button
+            variant="contained"
+            className="textslider-btn"
+            sx={{
+              backgroundColor: "#343a40",
+              color: "white",
+              marginTop: "20px",
+              marginLeft: "10px",
+              "&:hover": {
+                color: "white",
+                backgroundColor: "#f26522",
+              },
+            }}
+          >
             BUY NOW
           </Button>
         </div>
@@ -48,7 +74,20 @@ const Textswiper = () => {
         <div className="slide-content">
           <h2>GET START</h2>
           <p>YOUR FAVRIOT SHOPING</p>
-          <Button variant="contained" className="textslider-btn">
+          <Button
+            variant="contained"
+            className="textslider-btn"
+            sx={{
+              backgroundColor: "#343a40",
+              color: "white",
+              marginTop: "20px",
+              marginLeft: "10px",
+              "&:hover": {
+                color: "white",
+                backgroundColor: "#f26522",
+              },
+            }}
+          >
             BUY NOW
           </Button>
         </div>
