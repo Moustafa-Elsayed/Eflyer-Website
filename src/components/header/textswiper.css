@@ -49,3 +49,13 @@
   content: "next";
   color: black;
 }
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  background-color:#343a40;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  border-radius: 30%;
+}
