@@ -29,6 +29,7 @@ import "./header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../../redux/productSlice";
+
 const Header = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ const Header = () => {
     dispatch(fetchProduct());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   const navigate = useNavigate();
   const location = useLocation();
   const [open, setOpen] = useState("none");
@@ -47,7 +49,12 @@ const Header = () => {
   return (
     <>
       <div className="appbar">
-        <AppBar position="fixed" sx={{ backgroundColor: "transparent" }}>
+        <AppBar
+          position="fixed"
+          sx={{ backgroundColor: "white" }}
+          elevation={2}
+          
+        >
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Typography
               variant="p"
