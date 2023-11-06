@@ -11,7 +11,6 @@ import { addToCart } from "../../redux/cartSlice";
 
 const ProductList = () => {
   const product = useSelector((state) => state.product);
-  console.log(product);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
@@ -36,40 +35,52 @@ const ProductList = () => {
       <Grid container spacing={2}>
         {product.map((product) => (
           <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card
+              elevation={5}
+              sx={{ maxWidth: "100%", borderRadius: "9px", height: "100%" }}
+              onClick={() => {}}
+            >
               <CardActionArea>
                 <CardMedia
                   component="img"
                   height="140"
                   image={product.image}
                   alt="green iguana"
+                  sx={{ paddingTop: "10px" }}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {product.category}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {product.title}
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ marginBottom: "5px" }}
+                  >
+                    {product.price}$
                   </Typography>
+                  <Button
+                    size="small"
+                    color="primary"
+                    variant="contained"
+                    onClick={() => {
+                      dispatch(addToCart(product));
+                    }}
+                  >
+                    Details
+                  </Button>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => {
-                    dispatch(addToCart(product));
-                  }}
-                >
-                  BUY NOW
-                </Button>
-              </CardActions>
             </Card>
           </Grid>
         ))}
       </Grid>
+      )
     </>
   );
 };
 
 export default ProductList;
+<Button size="small" color="primary" onClick={() => {}}>
+  BUY NOW
+</Button>;

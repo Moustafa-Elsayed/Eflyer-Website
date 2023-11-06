@@ -24,8 +24,7 @@ import { useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
+import Badge from "@mui/material/Badge";
 import "./header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -48,7 +47,7 @@ const Header = () => {
   return (
     <>
       <div className="appbar">
-        <AppBar position="fixed" sx={{ backgroundColor: "transparent" }}>
+        <AppBar position="fixed" sx={{ backgroundColor: "red" }}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Typography
               variant="p"
@@ -121,8 +120,6 @@ const Header = () => {
                   />
                 </ListItemButton>
 
-              
-
                 <Button
                   sx={{
                     backgroundColor: "transparent",
@@ -135,16 +132,14 @@ const Header = () => {
                   }}
                   onClick={() => {
                     navigate("/cart");
-                    
                   }}
                   disableElevation
-                  startIcon={  <Badge color="primary" badgeContent={cart.length} 
-                  showZero>
-                    <ShoppingCartIcon />
-                  </Badge>}
-                >
-                  
-                </Button>
+                  startIcon={
+                    <Badge color="primary" badgeContent={cart.length} showZero>
+                      <ShoppingCartIcon />
+                    </Badge>
+                  }
+                ></Button>
               </Box>
             </Box>
 
@@ -276,13 +271,15 @@ const Header = () => {
               },
             }}
             onClick={() => {
-              navigate("/message");
+              navigate("/cart");
             }}
             disableElevation
-            startIcon={<ShoppingCartIcon sx={{}} />}
-          >
-            Cart
-          </Button>
+            startIcon={
+              <Badge color="primary" badgeContent={cart.length} showZero>
+                <ShoppingCartIcon />
+              </Badge>
+            }
+          ></Button>
         </Box>
       </Drawer>
     </>

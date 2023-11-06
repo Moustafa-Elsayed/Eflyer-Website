@@ -21,9 +21,13 @@ export const productSlice = createSlice({
   initialState: [],
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchProduct.fulfilled, (state, action) => {
-      return action.payload;
-    });
+    builder
+      .addCase(fetchProduct.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(fetchProduct.pending, (state, action) => {
+        console.log(action);
+      });
   },
 });
 
