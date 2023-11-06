@@ -20,7 +20,7 @@ const Textswiper = () => {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      pagination={{ el: ".swiper-pagination", clickable: true }}
+      pagination={{clickable: true }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
       className="swiper"
