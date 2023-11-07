@@ -47,19 +47,19 @@ const Cart = () => {
       </Typography>
       {cart.length > 0 ? (
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table  aria-label="simple table" >
             <TableHead>
               <TableRow>
                 <TableCell>ID</TableCell>
                 <TableCell align="left">Title</TableCell>
                 <TableCell align="left">Imgage</TableCell>
                 <TableCell align="left">Price</TableCell>
-                <TableCell align="left">quintity</TableCell>
+                <TableCell align="left">Quantity</TableCell>
 
                 <TableCell align="left">Actions</TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody >
               {cart.map((product) => (
                 <TableRow
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
