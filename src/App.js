@@ -9,6 +9,7 @@ import Root from "./pages/root/Root";
 import Home from "./pages/home/Home";
 import Notfound from "./pages/notfound/Notfound";
 import Cart from "./pages/cart/Cart";
+import ProductList from "./pages/product/ProductList";
 
 function App() {
   const router = createBrowserRouter(
@@ -16,6 +17,8 @@ function App() {
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="product" element={<ProductList />} />
+
         <Route path="*" element={<Notfound />} />
       </Route>
     )

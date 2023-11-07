@@ -84,7 +84,7 @@ const Header = () => {
                     className="home"
                     sx={{
                       color: "#343a40",
-                      
+
                       marginRight: "30px",
                       marginLeft: "30px",
                       textAlign: "center",
@@ -106,7 +106,7 @@ const Header = () => {
                     },
                   }}
                   onClick={() => {
-                    navigate("contact");
+                    navigate("product");
                   }}
                 >
                   <ListItemText
@@ -122,7 +122,7 @@ const Header = () => {
                       },
 
                       borderBottom:
-                        location.pathname === "/shfdj"
+                        location.pathname === "/product"
                           ? "1px solid #f26522"
                           : null,
                     }}
@@ -255,12 +255,12 @@ const Header = () => {
               mb: 1,
               "&:hover": { backgroundColor: "#ff7662" },
               backgroundColor:
-                location.pathname === "/contact" ? " #03a4ed" : null,
+                location.pathname === "/product" ? " #03a4ed" : null,
             }}
             onClick={() => {
               setClose("permanent");
               setOpen("none");
-              navigate("/contact");
+              navigate("/product");
             }}
           >
             <ListItemIcon>
@@ -280,6 +280,8 @@ const Header = () => {
               },
             }}
             onClick={() => {
+              setClose("permanent");
+              setOpen("none");
               navigate("/cart");
             }}
             disableElevation

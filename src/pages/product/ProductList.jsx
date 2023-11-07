@@ -35,7 +35,7 @@ const ProductList = () => {
           color: "#343a40",
           textAlign: "center",
           paddingBottom: "30px",
-          paddingTop: "30px",
+          paddingTop: "55px",
         }}
       >
         Man & Woman Fashion
