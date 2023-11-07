@@ -14,6 +14,8 @@ import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { clear, deleteFromCart } from "../../redux/cartSlice";
 import Typography from "@mui/material/Typography";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 
 const Cart = () => {
   const product = useSelector((state) => state.product);
@@ -44,51 +46,58 @@ const Cart = () => {
       <Typography variant="h5" color="initial">
         Total Price:{totalPrice.toFixed(2)} $
       </Typography>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell align="left">Title</TableCell>
-              <TableCell align="left">Imgage</TableCell>
-              <TableCell align="left">Price</TableCell>
-              <TableCell align="left">quintity</TableCell>
+      {cart.length > 0 ? (
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell align="left">Title</TableCell>
+                <TableCell align="left">Imgage</TableCell>
+                <TableCell align="left">Price</TableCell>
+                <TableCell align="left">quintity</TableCell>
 
-              <TableCell align="left">Actions</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {cart.map((product) => (
-              <TableRow
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                key={product.id}
-              >
-                <TableCell component="th" scope="row">
-                  {product.id}
-                </TableCell>
-                <TableCell align="left">{product.title}</TableCell>
-                <TableCell align="left">
-                  <img width="30px" src={product.image} alt="" />
-                </TableCell>
-                <TableCell align="left">{product.price}</TableCell>
-                <TableCell align="left">{product.quantity}</TableCell>
-
-                <TableCell align="left">
-                  <Button
-                    variant="text"
-                    color="primary"
-                    onClick={() => {
-                      dispatch(deleteFromCart(product));
-                    }}
-                  >
-                    <DeleteForeverIcon sx={{ color: "red" }} />
-                  </Button>
-                </TableCell>
+                <TableCell align="left">Actions</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {cart.map((product) => (
+                <TableRow
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  key={product.id}
+                >
+                  <TableCell component="th" scope="row">
+                    {product.id}
+                  </TableCell>
+                  <TableCell align="left">{product.title}</TableCell>
+                  <TableCell align="left">
+                    <img width="30px" src={product.image} alt="" />
+                  </TableCell>
+                  <TableCell align="left">{product.price}</TableCell>
+                  <TableCell align="left">{product.quantity}</TableCell>
+
+                  <TableCell align="left">
+                    <Button
+                      variant="text"
+                      color="primary"
+                      onClick={() => {
+                        dispatch(deleteFromCart(product));
+                      }}
+                    >
+                      <DeleteForeverIcon sx={{ color: "red" }} />
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      ) : (
+        <Alert severity="info" sx={{maxWidth:"550" ,justifyContent: "center",padding:"20px",marginTop:"20px"}}>
+          
+          No product in your cart — <strong>check it out!</strong>
+        </Alert>
+      )}
     </Container>
   );
 };
