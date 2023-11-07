@@ -12,7 +12,8 @@ import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import { deleteFromCart } from "../../redux/cartSlice";
+import { clear, deleteFromCart } from "../../redux/cartSlice";
+import Typography from "@mui/material/Typography";
 
 const Cart = () => {
   const product = useSelector((state) => state.product);
@@ -24,9 +25,26 @@ const Cart = () => {
     dispatch(fetchProduct());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  const totalPrice = cart.reduce((acc, product) => {
+    acc += product.price * product.quantity;
+    return acc;
+  }, 0);
   return (
-    <Container maxWidth="lg" sx={{marginTop:"150px",Width:"100%"}}>
-      <TableContainer component={Paper} >
+    <Container maxWidth="lg" sx={{ marginTop: "150px", Width: "100%" }}>
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{ marginBottom: "10px" }}
+        onClick={() => {
+          dispatch(clear());
+        }}
+      >
+        CLEAR
+      </Button>
+      <Typography variant="h5" color="initial">
+        Total Price:{totalPrice.toFixed(2)} $
+      </Typography>
+      <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -34,6 +52,8 @@ const Cart = () => {
               <TableCell align="left">Title</TableCell>
               <TableCell align="left">Imgage</TableCell>
               <TableCell align="left">Price</TableCell>
+              <TableCell align="left">quintity</TableCell>
+
               <TableCell align="left">Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -51,6 +71,7 @@ const Cart = () => {
                   <img width="30px" src={product.image} alt="" />
                 </TableCell>
                 <TableCell align="left">{product.price}</TableCell>
+                <TableCell align="left">{product.quantity}</TableCell>
 
                 <TableCell align="left">
                   <Button
@@ -60,7 +81,7 @@ const Cart = () => {
                       dispatch(deleteFromCart(product));
                     }}
                   >
-                    <DeleteForeverIcon sx={{color:"red"}}/>
+                    <DeleteForeverIcon sx={{ color: "red" }} />
                   </Button>
                 </TableCell>
               </TableRow>

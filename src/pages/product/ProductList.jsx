@@ -42,7 +42,7 @@ const ProductList = () => {
       </Typography>
       {isLoading === true ? (
         <div className="center">
-          <div class="dot-spinner">
+          <div className="dot-spinner">
             <div className="dot-spinner__dot"></div>
             <div className="dot-spinner__dot"></div>
             <div className="dot-spinner__dot"></div>
@@ -54,7 +54,7 @@ const ProductList = () => {
           </div>
         </div>
       ) : (
-        <Grid container spacing={3}>
+        <Grid container spacing={5}>
           {product.map((product) => (
             <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
               <Card
@@ -88,7 +88,7 @@ const ProductList = () => {
 
                 <CardMedia
                   component="img"
-                  height="250"
+                  height="180"
                   image={product.image}
                   alt="green iguana"
                   sx={{ paddingTop: "10px" }}
@@ -113,13 +113,13 @@ const ProductList = () => {
                       dispatch(addToCart(product));
                     }}
                   >
-                    <div data-tooltip={product.price} class="button">
-                      <div class="button-wrapper">
-                        <div class="text">ADD TO CART</div>
-                        <span class="icon">
+                    <div data-tooltip={product.price} className="button">
+                      <div className="button-wrapper">
+                        <div className="text">ADD TO CART</div>
+                        <span className="icon">
                           <svg
                             viewBox="0 0 16 16"
-                            class="bi bi-cart2"
+                            className="bi bi-cart2"
                             fill="currentColor"
                             height="16"
                             width="16"
