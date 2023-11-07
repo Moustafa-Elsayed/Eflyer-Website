@@ -12,88 +12,89 @@ SwiperCore.use([Pagination]);
 
 const Textswiper = () => {
   return (
-    <Swiper
-      loop
-      spaceBetween={30}
-      centeredSlides={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      
-      navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
-      className="swiper"
-    >
-      <div className="slide-pot"></div>
+    <div className="banner">
+      <Swiper
+        loop
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="swiper"
+      >
+        <div className="slide-pot"></div>
 
-      <SwiperSlide>
-        <div className="slide-content">
-          <h2>GET START</h2>
-          <p>YOUR FAVRIOT SHOPING</p>
-          <Button
-            variant="contained"
-            className="textslider-btn"
-            sx={{
-              backgroundColor: "#343a40",
-              color: "white",
-              marginTop: "20px",
-              marginLeft: "10px",
-              "&:hover": {
+        <SwiperSlide>
+          <div className="slide-content">
+            <h2>GET START</h2>
+            <p>YOUR FAVRIOT SHOPING</p>
+            <Button
+              variant="contained"
+              className="textslider-btn"
+              sx={{
+                backgroundColor: "#343a40",
                 color: "white",
-                backgroundColor: "#f26522",
-              },
-            }}
-          >
-            BUY NOW
-          </Button>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="slide-content">
-          <h2>GET START</h2>
-          <p>YOUR FAVRIOT SHOPING</p>
-          <Button
-            variant="contained"
-            className="textslider-btn"
-            sx={{
-              backgroundColor: "#343a40",
-              color: "white",
-              marginTop: "20px",
-              marginLeft: "10px",
-              "&:hover": {
+                marginTop: "20px",
+                marginLeft: "10px",
+                "&:hover": {
+                  color: "white",
+                  backgroundColor: "#f26522",
+                },
+              }}
+            >
+              BUY NOW
+            </Button>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide-content">
+            <h2>GET START</h2>
+            <p>YOUR FAVRIOT SHOPING</p>
+            <Button
+              variant="contained"
+              className="textslider-btn"
+              sx={{
+                backgroundColor: "#343a40",
                 color: "white",
-                backgroundColor: "#f26522",
-              },
-            }}
-          >
-            BUY NOW
-          </Button>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="slide-content">
-          <h2>GET START</h2>
-          <p>YOUR FAVRIOT SHOPING</p>
-          <Button
-            variant="contained"
-            className="textslider-btn"
-            sx={{
-              backgroundColor: "#343a40",
-              color: "white",
-              marginTop: "20px",
-              marginLeft: "10px",
-              "&:hover": {
+                marginTop: "20px",
+                marginLeft: "10px",
+                "&:hover": {
+                  color: "white",
+                  backgroundColor: "#f26522",
+                },
+              }}
+            >
+              BUY NOW
+            </Button>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide-content">
+            <h2>GET START</h2>
+            <p>YOUR FAVRIOT SHOPING</p>
+            <Button
+              variant="contained"
+              className="textslider-btn"
+              sx={{
+                backgroundColor: "#343a40",
                 color: "white",
-                backgroundColor: "#f26522",
-              },
-            }}
-          >
-            BUY NOW
-          </Button>
-        </div>
-      </SwiperSlide>
-    </Swiper>
+                marginTop: "20px",
+                marginLeft: "10px",
+                "&:hover": {
+                  color: "white",
+                  backgroundColor: "#f26522",
+                },
+              }}
+            >
+              BUY NOW
+            </Button>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 };
 
