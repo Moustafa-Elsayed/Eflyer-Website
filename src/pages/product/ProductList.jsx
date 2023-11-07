@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../../redux/productSlice";
 import { addToCart } from "../../redux/cartSlice";
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import "./productlist.css";
 const ProductList = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,6 +60,7 @@ const ProductList = () => {
             <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
               <Card
                 elevation={2}
+                className="card-hover"
                 sx={{
                   maxWidth: "100%",
                   borderRadius: "9px",
@@ -67,6 +69,16 @@ const ProductList = () => {
                 }}
                 onClick={() => {}}
               >
+                <div className="overlay" onClick={()=>{
+                  
+                }}>
+                  <VisibilityIcon sx={{
+                    cursor:"pointer",
+                    zIndex:"111"
+                  }}
+                
+                  />
+                </div>
                 <Typography
                   gutterBottom
                   variant="h5"

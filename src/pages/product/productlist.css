@@ -216,3 +216,35 @@ align-items: center;
     opacity: 1;
   }
 }
+
+.card-hover{
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+.card-hover:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(54, 54, 54, 0.6); /* Semi-transparent background color */
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.card-hover:hover .overlay {
+  opacity: 1;
+}
