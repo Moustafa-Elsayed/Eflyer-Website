@@ -1,6 +1,10 @@
 
-
 .logo {
   font-size: 35px;
   color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+.home{
+  font-weight: 800 !important;
 }

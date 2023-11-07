@@ -53,7 +53,6 @@ const Header = () => {
           position="fixed"
           sx={{ backgroundColor: "white" }}
           elevation={2}
-          
         >
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Typography
@@ -76,13 +75,16 @@ const Header = () => {
                     "&:hover": {
                       backgroundColor: "transparent",
                     },
+                    fontWeight: "900 !important",
                   }}
                 >
                   <ListItemText
+                    variant="p"
                     primary="Home"
+                    className="home"
                     sx={{
                       color: "#343a40",
-                      fontSize: "22px",
+                      
                       marginRight: "30px",
                       marginLeft: "30px",
                       textAlign: "center",
