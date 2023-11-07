@@ -4,6 +4,7 @@
   color: black;
   font-weight: 600;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .home{
   font-weight: 800 !important;
