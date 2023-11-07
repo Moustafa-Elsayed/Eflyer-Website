@@ -31,7 +31,7 @@ export const cartSlice = createSlice({
     },
     clear: (state, action) => {
       state.length = 0; // Clear the cart state
-      localStorage.removeItem("cart"); // Remove the cart state from local storage
+      localStorage.removeItem("cart"); 
     },
   },
 });

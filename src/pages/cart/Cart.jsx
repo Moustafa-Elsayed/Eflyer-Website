@@ -15,7 +15,6 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { clear, deleteFromCart } from "../../redux/cartSlice";
 import Typography from "@mui/material/Typography";
 import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
 
 const Cart = () => {
   const product = useSelector((state) => state.product);
