@@ -21,6 +21,7 @@
   align-items: center;
   padding-top: 110px;
   z-index: 1;
+  padding-bottom: 50px;
 }
 @media (max-width: 720px) {
   .swiper .slide-content {
@@ -38,12 +39,14 @@
   width: 80%;
   font-size: 50px;
   font-weight: 600;
+  padding-top: 70px;
 }
 .swiper .slide-content h2 {
   color: white;
   font-size: 50px;
   font-style: bold;
   font-weight: 800;
+  padding-top: 35px;
 }
 @media (max-width: 720px) {
   .swiper .slide-content p {

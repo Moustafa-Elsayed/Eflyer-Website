@@ -6,7 +6,7 @@ import axios from "axios";
 import "./productlist.css";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
+import "./productlist.css";
 const ProductDetails = () => {
   const url = "https://fakestoreapi.com/products";
   const [data, setData] = useState({});

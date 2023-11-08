@@ -6,18 +6,22 @@
 }
 .content .card-content h1 {
   font-weight: 800;
+  padding-top: 20px;
 }
 .content .card-content h2 {
   font-weight: 500;
+  padding-top: 20px;
 }
 .content .card-content h3 {
   font-weight: 500;
+  padding-top: 50px;
   color: red;
 }
 
 .content .card-content p {
   color: rgb(143, 141, 141);
   max-width: 80%;
+  padding-top: 30px;
 }
 
 .content .card-content {
