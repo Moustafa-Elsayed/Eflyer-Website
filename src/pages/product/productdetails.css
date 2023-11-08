@@ -1,19 +1,26 @@
 .content {
   padding-top: 150px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
 }
-.content img {
-  width: 80%;
+.content .img-details {
+  width: 60%;
+}
+.content .card-content h1 {
+  font-weight: 800;
+}
+.content .card-content h2 {
+  font-weight: 500;
+}
+.content .card-content h3 {
+  font-weight: 500;
+  color: red;
 }
 
 .content .card-content p {
-  color: red;
-  max-width: 50%;
+  color: rgb(143, 141, 141);
+  max-width: 80%;
 }
-.content .card-content{
+
+.content .card-content {
   display: flex;
   justify-content: center;
   align-items: center;
