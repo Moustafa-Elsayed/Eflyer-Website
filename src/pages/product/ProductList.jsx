@@ -9,8 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../../redux/productSlice";
 import { addToCart } from "../../redux/cartSlice";
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import "./productlist.css";
+import { useNavigate } from "react-router-dom";
 const ProductList = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -18,7 +19,7 @@ const ProductList = () => {
       setIsLoading(false); // Set isLoading to false after the data is loaded
     }, 2000); // Simulating a 2-second delay
   }, []);
-
+  const navigate = useNavigate();
   const product = useSelector((state) => state.product);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -69,14 +70,15 @@ const ProductList = () => {
                 }}
                 onClick={() => {}}
               >
-                <div className="overlay" onClick={()=>{
-                  
-                }}>
-                  <VisibilityIcon sx={{
-                    cursor:"pointer",
-                    zIndex:"111"
-                  }}
-                
+                <div className="overlay">
+                  <VisibilityIcon
+                    sx={{
+                      cursor: "pointer",
+                      zIndex: "111",
+                    }}
+                    onClick={() => {
+                      navigate(`/product/${product.id}`);
+                    }}
                   />
                 </div>
                 <Typography

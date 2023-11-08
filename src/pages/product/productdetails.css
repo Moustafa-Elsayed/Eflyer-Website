@@ -1,0 +1,15 @@
+.content {
+  padding-top: 150px;
+}
+.content img {
+  width: 50%;
+}
+.content .card-content p {
+  color: red;
+}
+.content .card-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
