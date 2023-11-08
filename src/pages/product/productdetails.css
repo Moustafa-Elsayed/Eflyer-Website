@@ -1,11 +1,17 @@
 .content {
   padding-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 .content img {
-  width: 50%;
+  width: 80%;
 }
+
 .content .card-content p {
   color: red;
+  max-width: 50%;
 }
 .content .card-content{
   display: flex;
