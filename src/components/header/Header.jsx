@@ -149,6 +149,14 @@ const Header = () => {
                     </Badge>
                   }
                 ></Button>
+
+                <Typography
+                  variant="body1"
+                  color="initial"
+                  sx={{ padding: "10px" }}
+                >
+                  hello mostafa
+                </Typography>
               </Box>
             </Box>
 
@@ -291,6 +299,9 @@ const Header = () => {
               </Badge>
             }
           ></Button>
+          <Typography variant="body1" color="initial" sx={{ padding: "10px" }}>
+            hello mostafa
+          </Typography>
         </Box>
       </Drawer>
     </>

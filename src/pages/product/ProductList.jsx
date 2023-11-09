@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useState } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -13,19 +13,14 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import "./productlist.css";
 import { useNavigate } from "react-router-dom";
 const ProductList = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false); // Set isLoading to false after the data is loaded
-    }, 2000); // Simulating a 2-second delay
-  }, []);
   const navigate = useNavigate();
-  const product = useSelector((state) => state.product);
+  const product = useSelector((state) => state.product.data);
+  const isloading = useSelector((state) => state.product.isloading);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <Typography
@@ -42,7 +37,7 @@ const ProductList = () => {
       >
         Man & Woman Fashion
       </Typography>
-      {isLoading === true ? (
+      {isloading ? (
         <div className="center">
           <div className="dot-spinner">
             <div className="dot-spinner__dot"></div>
