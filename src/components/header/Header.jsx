@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Box,
   Button,
@@ -29,8 +29,11 @@ import "./header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../../redux/productSlice";
+import Alert from '@mui/material/Alert';
 
 const Header = () => {
+  const { error } = useSelector((state) => state.product);
+
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -47,10 +50,15 @@ const Header = () => {
   const [close, setClose] = useState("permanent");
 
   return (
-    <>
+    <Fragment>
       <div className="appbar">
+        {error && (
+              <Alert severity="warning" sx={{justifyContent:"center"}}>{error}</Alert>
+
+        )}
+
         <AppBar
-          position="fixed"
+          position="sticky"
           sx={{ backgroundColor: "white" }}
           elevation={2}
         >
@@ -64,7 +72,6 @@ const Header = () => {
             >
               Eflyer
             </Typography>
-
             <Box sx={{ display: { xs: "none", md: "block" } }}>
               <Box sx={{ display: "flex", marginRight: "60px" }}>
                 <ListItemButton
@@ -169,6 +176,7 @@ const Header = () => {
             />
           </Toolbar>
         </AppBar>
+
         <div className="overlay"></div>
       </div>
 
@@ -304,7 +312,7 @@ const Header = () => {
           </Typography>
         </Box>
       </Drawer>
-    </>
+    </Fragment>
   );
 };
 

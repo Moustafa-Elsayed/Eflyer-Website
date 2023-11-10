@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 const ProductList = () => {
   const navigate = useNavigate();
   const product = useSelector((state) => state.product.data);
+  console.log(product);
   const isloading = useSelector((state) => state.product.isloading);
 
   const dispatch = useDispatch();
