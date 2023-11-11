@@ -16,11 +16,12 @@ import { clear, deleteFromCart } from "../../redux/cartSlice";
 import Typography from "@mui/material/Typography";
 import Alert from "@mui/material/Alert";
 
+
+
 const Cart = () => {
   const product = useSelector((state) => state.product);
-  const cart = useSelector((state) => state.cart);
-
   console.log(product);
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
@@ -47,7 +48,7 @@ const Cart = () => {
       </Typography>
       {cart.length > 0 ? (
         <TableContainer component={Paper}>
-          <Table  aria-label="simple table" >
+          <Table aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>ID</TableCell>
@@ -59,7 +60,7 @@ const Cart = () => {
                 <TableCell align="left">Actions</TableCell>
               </TableRow>
             </TableHead>
-            <TableBody >
+            <TableBody>
               {cart.map((product) => (
                 <TableRow
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -92,8 +93,15 @@ const Cart = () => {
           </Table>
         </TableContainer>
       ) : (
-        <Alert severity="info" sx={{maxWidth:"550" ,justifyContent: "center",padding:"20px",marginTop:"20px"}}>
-          
+        <Alert
+          severity="info"
+          sx={{
+            maxWidth: "550",
+            justifyContent: "center",
+            padding: "20px",
+            marginTop: "20px",
+          }}
+        >
           No product in your cart — <strong>check it out!</strong>
         </Alert>
       )}

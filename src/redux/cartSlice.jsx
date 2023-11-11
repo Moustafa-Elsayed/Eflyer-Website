@@ -13,11 +13,10 @@ const loadStateFromLocalStorage = () => {
     return undefined;
   }
 };
-const initialState = loadStateFromLocalStorage() || [];
 
 export const cartSlice = createSlice({
   name: "cartSlice",
-  initialState,
+  initialState: loadStateFromLocalStorage() || [],
   reducers: {
     addToCart: (state, action) => {
       const findProduct = state.find(
