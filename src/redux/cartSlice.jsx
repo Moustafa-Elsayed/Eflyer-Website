@@ -1,7 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // Load cart state from local storage (if available)
-const initialState = JSON.parse(localStorage.getItem("cart")) || [];
+const loadStateFromLocalStorage = () => {
+  try {
+    const serializedState = localStorage.getItem("cart");
+    if (serializedState === null) {
+      return undefined;
+    }
+    return JSON.parse(serializedState);
+  } catch (err) {
+    console.error("Error loading cart state from local storage:", err);
+    return undefined;
+  }
+};
+const initialState = loadStateFromLocalStorage() || [];
 
 export const cartSlice = createSlice({
   name: "cartSlice",
@@ -31,7 +43,7 @@ export const cartSlice = createSlice({
     },
     clear: (state, action) => {
       state.length = 0; // Clear the cart state
-      localStorage.removeItem("cart"); 
+      localStorage.removeItem("cart");
     },
   },
 });

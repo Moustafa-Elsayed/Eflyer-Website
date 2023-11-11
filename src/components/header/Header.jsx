@@ -29,7 +29,7 @@ import "./header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../../redux/productSlice";
-import Alert from '@mui/material/Alert';
+import Alert from "@mui/material/Alert";
 
 const Header = () => {
   const { error } = useSelector((state) => state.product);
@@ -53,8 +53,9 @@ const Header = () => {
     <Fragment>
       <div className="appbar">
         {error && (
-              <Alert severity="warning" sx={{justifyContent:"center"}}>{error}</Alert>
-
+          <Alert severity="warning" sx={{ justifyContent: "center" }}>
+            {error}
+          </Alert>
         )}
 
         <AppBar
@@ -156,14 +157,6 @@ const Header = () => {
                     </Badge>
                   }
                 ></Button>
-
-                <Typography
-                  variant="body1"
-                  color="initial"
-                  sx={{ padding: "10px" }}
-                >
-                  hello mostafa
-                </Typography>
               </Box>
             </Box>
 
@@ -307,9 +300,7 @@ const Header = () => {
               </Badge>
             }
           ></Button>
-          <Typography variant="body1" color="initial" sx={{ padding: "10px" }}>
-            hello mostafa
-          </Typography>
+        
         </Box>
       </Drawer>
     </Fragment>
