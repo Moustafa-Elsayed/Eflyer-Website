@@ -33,7 +33,7 @@ const Cart = () => {
   }, 0);
   return (
     <Container maxWidth="lg" sx={{ marginTop: "150px", Width: "100%" }}>
-      <Button
+      {cart.length>0 ?<Button
         variant="contained"
         color="primary"
         sx={{ marginBottom: "10px" }}
@@ -42,7 +42,8 @@ const Cart = () => {
         }}
       >
         CLEAR
-      </Button>
+      </Button> :null}
+      
       <Typography variant="h5" color="initial">
         Total Price:{totalPrice.toFixed(2)} $
       </Typography>
