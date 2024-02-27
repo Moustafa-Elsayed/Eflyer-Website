@@ -38,6 +38,13 @@ Technologies used in the project:
 
 *  [React Js](https://react.dev/learn) 
 *  [Materila ui](https://mui.com/material-ui/getting-started/) 
+*  [React Router Dom](https://mui.com/material-ui/getting-started/) 
+*  [Redux Toolkit](https://mui.com/material-ui/getting-started/) 
+*  [Swipper Js](https://mui.com/material-ui/getting-started/) 
+*  [Sass](https://mui.com/material-ui/getting-started/) 
+
+
+
 
 
 
