@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+<h1 align="center">eflyer E-commerce WebSite</h1>
+<P>This is a eflyer E-commerce WebSite built with ReactJS,Sass,Materila ui, React Router Dom,..</P>
+<p align="center"><img src="https://i.ibb.co/6RSzM1D/eflyer.png" alt="project"></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>🚀 Demo</h2>
 
-## Available Scripts
+https://moustafa-elsayed-portoflio.vercel.app/
+<h2>Project Screenshots:</h2>
 
-In the project directory, you can run:
+<img src="https://i.ibb.co/F6gvxP5/eflyer1.png" alt="shields" width="800" height="400&quot;/">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2>🛠️ Installation Steps:</h2>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p>1. Clone the repository</p>
 
-### `npm test`
+```
+git clone https://github.com/Moustafa-Elsayed/personal-portfolio.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>2. Install npm modules</p>
 
-### `npm run build`
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>3. Start development server using below command</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm start 
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+  
+  
+<h2>💻 Built with</h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Technologies used in the project:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*  [React Js](https://react.dev/learn) 
+*  [Materila ui](https://mui.com/material-ui/getting-started/) 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<h2>🛡️ Authors:</h2>
+<div align="left">
+  <a href="https://www.linkedin.com/in/mostafa-elsayed-9bb2a42b3/"><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo" /></a>
+ <a href="https://wa.me/201002602130"><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/whatsapp/default.svg" width="52" height="40" alt="whatsapp logo" /></a>
+  <a href="https://t.me/01002602130"><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/telegram/default.svg" width="52" height="40" alt="telegram logo" /></a>
+  <a href="mailto:moelsayed949@gmail.com"><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="Gmail logo" /></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+</div>
 
-### Analyzing the Bundle Size
+<h2> Contributing:</h2>
+* Contributions, issues and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+<h2>💖Like my work?</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️.   
+If you found the app helpful consider supporting me 
+[Moustafa Elsayed](https://github.com/Moustafa-Elsayed)
